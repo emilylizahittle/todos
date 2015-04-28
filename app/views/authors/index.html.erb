@@ -1,0 +1,26 @@
+<h1> Authors </h1>
+
+
+<% @authors.each do |author| %> 
+
+    <p>Name: <%= author.name %><br>
+    	Age: <%= author.age %> <br>
+    	<button> My Todos</button>
+    	<%= button_to "Delete", author, method: :delete %>
+   
+<%end%>
+
+<h1> Add yourself as an Author and create a Todo</h1>
+
+<%= form_for :author do |f| %>
+  <p>
+      Name: <%= f.text_field :name %> <br>
+      Age: <%= f.text_field :age %><br>
+      Todo: <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+

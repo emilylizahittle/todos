@@ -1,0 +1,14 @@
+
+<h1>Add a Todo</h1>
+    <form method="post" action="/todos/create">
+      <input type="text" name="todo[description]" placeholder="Description"><br />
+      <!-- <select name="article[AuthorId]"> -->
+        <option value="">Select an author...</option>
+        <% ejsAuthors.forEach(function(author) { %>
+          <option value="<%= author.id %>"><%= author.name %> <%= author.age %></option>
+        <% })  %>
+      </select>
+      <br />
+      <textarea name="article[content]"></textarea><br />
+      <button>Save </button>
+    </form>
